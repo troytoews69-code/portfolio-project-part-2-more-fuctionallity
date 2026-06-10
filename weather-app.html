@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Live Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="weather-app.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h1>Weather App</h1>
+                </div>
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="citySearch" 
+                        placeholder="Search for a city..." 
+                        class="search-input"
+                    >
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="locationBtn" class="location-btn" title="Use my location">
+                        <i class="fas fa-location-crosshairs"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Weather Display -->
+        <main class="main-content">
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="errorState" class="error-state">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p id="errorMessage">Unable to load weather data</p>
+                <button id="retryBtn" class="retry-btn">Try Again</button>
+            </div>
+
+            <!-- Weather Content -->
+            <div id="weatherContent" class="weather-content">
+                <!-- Current Weather -->
+                <section class="current-weather">
+                    <div class="weather-main">
+                        <div class="location-info">
+                            <h2 id="cityName">Kelowna</h2>
+                            <p id="countryName">Canada</p>
+                            <p id="localTime" class="local-time"></p>
+                        </div>
+                        <div class="temperature-display">
+                            <div class="temp-main">
+                                <span id="temperature">--</span>°C
+                            </div>
+                            <div class="weather-icon-main">
+                                <img id="weatherIcon" src="" alt="Weather icon">
+                            </div>
+                        </div>
+                        <div class="weather-description">
+                            <p id="weatherDesc">--</p>
+                            <p class="feels-like">Feels like <span id="feelsLike">--</span>°C</p>
+                        </div>
+                    </div>
+
+                    <!-- Weather Details Grid -->
+                    <div class="weather-details">
+                        <div class="detail-card">
+                            <i class="fas fa-wind"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Wind Speed</span>
+                                <span class="detail-value" id="windSpeed">-- km/h</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Humidity</span>
+                                <span class="detail-value" id="humidity">--%</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-gauge-high"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Pressure</span>
+                                <span class="detail-value" id="pressure">-- mb</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-eye"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Visibility</span>
+                                <span class="detail-value" id="visibility">-- km</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-sun"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">UV Index</span>
+                                <span class="detail-value" id="uvIndex">--</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-cloud"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Cloud Cover</span>
+                                <span class="detail-value" id="cloudCover">--%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Forecast Section -->
+                <section class="forecast-section">
+                    <h3><i class="fas fa-calendar-days"></i> 3-Day Forecast</h3>
+                    <div id="forecastContainer" class="forecast-container">
+                        <!-- Forecast cards will be inserted here -->
+                    </div>
+                </section>
+
+                <!-- Hourly Forecast -->
+                <section class="hourly-section">
+                    <h3><i class="fas fa-clock"></i> Hourly Forecast</h3>
+                    <div id="hourlyContainer" class="hourly-container">
+                        <!-- Hourly forecast will be inserted here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Powered by WeatherAPI.com | Built with <i class="fas fa-heart"></i></p>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </footer>
+    </div>
+
+    <script src="weather-app.js"></script>
+</body>
+</html>

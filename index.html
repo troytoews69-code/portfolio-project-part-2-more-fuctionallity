@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troy Lussier - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- This is where the Navigation Section is located -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="theme-toggle" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="now-playing-widget" id="nowPlayingWidget">
+                    <div class="now-playing-content">
+                        <div class="now-playing-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="now-playing-info">
+                            <div class="now-playing-text">Currently Learning</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-widget-nav" id="weatherWidgetNav">
+                    <div class="weather-content-nav">
+                        <div class="weather-icon-nav">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="weather-info-nav">
+                            <div class="weather-temp-nav">--°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This is where the Hero Section is located -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Troy Lussier</span></h1>
+            <p class="hero-subtitle">
+                <span class="typing-text">Full Stack Developer & Creative Problem Solver</span>
+            </p>
+            <p class="hero-description">
+                I'm passionate about creating innovative web solutions and bringing ideas to life through code.
+            </p>
+            <div class="hero-buttons">
+                <a href="#skills" class="btn btn-primary">View My Skills</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-photo">
+                <img src="portfolio pic.jpg" alt="Troy Lussier - Developer" />
+            </div>
+        </div>
+    </section>
+
+    <!-- This is where the About Section is located -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm Troy Lussier, a passionate developer with a unique journey into the world of technology. 
+                        After dedicating over 20 years to carpentry, building everything from custom homes to intricate 
+                        woodwork, a workplace injury redirected my path toward coding and web development.
+                    </p>
+                    <p>
+                        What started as a necessity became a passion. The problem-solving skills, attention to detail, 
+                        and craftsmanship mindset I developed as a carpenter translate perfectly to writing clean, 
+                        efficient code. I approach each project with the same dedication to quality and precision 
+                        that I brought to every construction job.
+                    </p>
+                    <p>
+                        My transition from building physical structures to creating digital experiences has been 
+                        incredibly rewarding. I continuously learn and adapt to new technologies, bringing both 
+                        the work ethic of a seasoned tradesman and the fresh perspective of someone who chose 
+                        coding as their second career.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Years in Carpentry</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Coding</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Commitment to Learning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-photo">
+                        <img src="pic of me and floyd.jpg" alt="Troy Lussier with Floyd" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- This is where the Skills Section is located -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and modern HTML standards</p>
+                    <div class="skill-progress" data-percentage="90">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">90%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Responsive design, flexbox, grid, and animations</p>
+                    <div class="skill-progress" data-percentage="85">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">85%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>ES6+ fundamentals and DOM manipulation</p>
+                    <div class="skill-progress" data-percentage="80">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">80%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Version Control</h3>
+                    <p>Git, GitHub, and collaborative development</p>
+                    <div class="skill-progress" data-percentage="75">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">75%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Problem Solving</h3>
+                    <p>Analytical thinking and debugging skills</p>
+                    <div class="skill-progress" data-percentage="95">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">95%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach and cross-browser compatibility</p>
+                    <div class="skill-progress" data-percentage="88">
+                        <div class="progress-fill"></div>
+                        <span class="progress-text">88%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- this is where the Projects Section is located -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card" data-category="portfolio web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/2d5a27/ffffff?text=Portfolio+Website" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="project-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/troytoews69-code" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>A modern, responsive portfolio website showcasing my journey from carpentry to web development with interactive features and smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web javascript">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/4a7c59/ffffff?text=Weather+App" alt="Weather App">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="weather-app.html" class="project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/troytoews69-code" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Full-featured weather app with current conditions, 3-day forecast, hourly predictions, and location search powered by WeatherAPI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web javascript">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/2d5a27/ffffff?text=Task+Manager" alt="Task Manager">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="task-manager.html" class="project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/troytoews69-code" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>Full-featured task manager with priority levels, filtering, sorting, local storage persistence, and a beautiful dark-themed UI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Local Storage</span>
+                            <span class="tech-tag">Drag & Drop</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/4a7c59/ffffff?text=Calculator+App" alt="Calculator">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="calculator.html" class="project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/troytoews69-code" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced Calculator</h3>
+                        <p>Scientific calculator with basic & advanced functions, calculation history, keyboard support, and light/dark theme toggle.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Math.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web javascript">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/2d5a27/ffffff?text=Quiz+Game" alt="Quiz Game">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="quiz-app.html" class="project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/troytoews69-code" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interactive Quiz App</h3>
+                        <p>Full-featured trivia quiz with multiple categories, difficulty levels, 30-second timer, score tracking, and high score system powered by Open Trivia DB.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">Animations</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="portfolio web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/4a7c59/ffffff?text=Coming+Soon" alt="Future Project">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="project-btn" target="_blank">
+                                    <i class="fas fa-hourglass-half"></i> In Progress
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>More Projects Coming Soon!</h3>
+                        <p>Currently working on exciting new projects including a full-stack application and React-based web app. Stay tuned!</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- this is where the GitHub Activity Section is located -->
+    <section id="github" class="github-activity">
+        <div class="container">
+            <h2 class="section-title">GitHub Activity</h2>
+            <p class="github-subtitle">Check out my recent contributions and repositories</p>
+            
+            <div class="github-stats">
+                <div class="github-stat-card">
+                    <div class="stat-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalRepos">--</h3>
+                        <p>Public Repos</p>
+                    </div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalCommits">--</h3>
+                        <p>Total Commits</p>
+                    </div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalStars">--</h3>
+                        <p>Stars Earned</p>
+                    </div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalFollowers">--</h3>
+                        <p>Followers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="github-content">
+                <div class="github-repos">
+                    <h3>
+                        <i class="fas fa-folder"></i> Latest Repositories
+                    </h3>
+                    <div id="reposList" class="repos-list">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading repositories...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="github-events">
+                    <h3>
+                        <i class="fas fa-history"></i> Recent Activity
+                    </h3>
+                    <div id="activityFeed" class="activity-feed">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading activity...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="github-link-section">
+                <a href="https://github.com/troytoews69-code" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> View Full GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- this is where the Contact Section is located -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always interested in hearing about new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>troylussier007@gmail.com</span>
+                            <button class="copy-btn" data-copy="troylussier007@gmail.com" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kelowna, B.C., Canada</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/troytoews69-code" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/troy-lussier-3a4bb069" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/troytoews69" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="mailto:troylussier007@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- This is where the Footer Section is located -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Troy Lussier. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- This is the Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

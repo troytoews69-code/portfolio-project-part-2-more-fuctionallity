@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Live Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-calculator"></i>
+                    <h1>Calculator</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Calculator -->
+        <main class="calculator-container">
+            <div class="calculator">
+                <!-- Display -->
+                <div class="display-container">
+                    <div class="display-previous" id="previousDisplay"></div>
+                    <div class="display-current" id="currentDisplay">0</div>
+                </div>
+
+                <!-- History -->
+                <div class="history-toggle">
+                    <button id="historyBtn" class="history-btn">
+                        <i class="fas fa-history"></i> History
+                    </button>
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons-grid">
+                    <!-- Row 1 -->
+                    <button class="btn btn-function" data-action="clear">C</button>
+                    <button class="btn btn-function" data-action="delete">
+                        <i class="fas fa-delete-left"></i>
+                    </button>
+                    <button class="btn btn-function" data-action="percent">%</button>
+                    <button class="btn btn-operator" data-action="divide">÷</button>
+
+                    <!-- Row 2 -->
+                    <button class="btn btn-number" data-number="7">7</button>
+                    <button class="btn btn-number" data-number="8">8</button>
+                    <button class="btn btn-number" data-number="9">9</button>
+                    <button class="btn btn-operator" data-action="multiply">×</button>
+
+                    <!-- Row 3 -->
+                    <button class="btn btn-number" data-number="4">4</button>
+                    <button class="btn btn-number" data-number="5">5</button>
+                    <button class="btn btn-number" data-number="6">6</button>
+                    <button class="btn btn-operator" data-action="subtract">−</button>
+
+                    <!-- Row 4 -->
+                    <button class="btn btn-number" data-number="1">1</button>
+                    <button class="btn btn-number" data-number="2">2</button>
+                    <button class="btn btn-number" data-number="3">3</button>
+                    <button class="btn btn-operator" data-action="add">+</button>
+
+                    <!-- Row 5 -->
+                    <button class="btn btn-number btn-zero" data-number="0">0</button>
+                    <button class="btn btn-number" data-action="decimal">.</button>
+                    <button class="btn btn-equals" data-action="equals">=</button>
+                </div>
+
+                <!-- Advanced Functions -->
+                <div class="advanced-toggle">
+                    <button id="advancedBtn" class="advanced-btn">
+                        <i class="fas fa-chevron-down"></i> Advanced
+                    </button>
+                </div>
+
+                <div class="advanced-functions" id="advancedFunctions">
+                    <button class="btn btn-advanced" data-action="sqrt">√</button>
+                    <button class="btn btn-advanced" data-action="square">x²</button>
+                    <button class="btn btn-advanced" data-action="power">xʸ</button>
+                    <button class="btn btn-advanced" data-action="factorial">x!</button>
+                    <button class="btn btn-advanced" data-action="sin">sin</button>
+                    <button class="btn btn-advanced" data-action="cos">cos</button>
+                    <button class="btn btn-advanced" data-action="tan">tan</button>
+                    <button class="btn btn-advanced" data-action="log">log</button>
+                    <button class="btn btn-advanced" data-action="ln">ln</button>
+                    <button class="btn btn-advanced" data-action="pi">π</button>
+                    <button class="btn btn-advanced" data-action="e">e</button>
+                    <button class="btn btn-advanced" data-action="inverse">1/x</button>
+                </div>
+            </div>
+
+            <!-- History Panel -->
+            <div class="history-panel" id="historyPanel">
+                <div class="history-header">
+                    <h3><i class="fas fa-history"></i> Calculation History</h3>
+                    <button id="clearHistory" class="clear-history-btn">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="history-empty">No calculations yet</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Built with <i class="fas fa-heart"></i> | Scientific Calculator</p>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
