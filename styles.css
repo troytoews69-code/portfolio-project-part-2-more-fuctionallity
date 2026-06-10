@@ -1,3 +1,15 @@
+/* CSS Custom Properties */
+:root {
+    --green-dark: #2d5a27;
+    --green-mid: #4a7c59;
+    --green-light: #6aa077;
+    --green-glow: rgba(45, 90, 39, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* This is the Reset and Base Styles section */
 * {
     margin: 0;
@@ -10,10 +22,11 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    background: #f5f9f6;
 }
 
 .container {
@@ -51,15 +64,16 @@ p {
 /* This is the buttons section */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 13px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     font-size: 1rem;
+    letter-spacing: 0.3px;
 }
 
 .btn-primary {
@@ -90,16 +104,21 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 
 .nav-container {
@@ -198,7 +217,7 @@ p {
     display: flex;
     align-items: center;
     padding: 120px 20px 80px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #eaf4ec 0%, #f2f9f4 40%, #e6f2ea 100%);
     position: relative;
     overflow: hidden;
 }
@@ -206,12 +225,27 @@ p {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23000" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.1;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(45, 90, 39, 0.1) 0%, transparent 65%);
+    top: -200px;
+    right: -150px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(74, 124, 89, 0.08) 0%, transparent 65%);
+    bottom: -150px;
+    left: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 10s ease-in-out infinite reverse;
 }
 
 .hero-content {
@@ -261,8 +295,9 @@ p {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(45, 90, 39, 0.3);
-    border: 4px solid #2d5a27;
+    box-shadow: 0 20px 60px rgba(45, 90, 39, 0.35), 0 0 0 8px rgba(45, 90, 39, 0.08);
+    border: 4px solid rgba(45, 90, 39, 0.5);
+    animation: float 6s ease-in-out infinite;
 }
 
 .profile-photo img {
@@ -291,18 +326,28 @@ section {
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-    border-radius: 2px;
+    background: linear-gradient(90deg, #2d5a27, #4a7c59, #6aa077);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+    width: 140px;
 }
 
 /* This is where we style the about section */
 .about {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #eef7f0 0%, #f4faf6 50%, #edf4ef 100%);
+}
+
+/* This is where we style the skills section */
+.skills {
+    background: linear-gradient(160deg, #f0f7f2 0%, #e8f4ec 100%);
 }
 
 .about-content {
@@ -327,10 +372,13 @@ section {
 .stat {
     text-align: center;
     padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat:hover {
@@ -378,20 +426,23 @@ section {
 }
 
 .skill-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
     transform: translateY(0);
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(45, 90, 39, 0.15);
+    border-color: rgba(45, 90, 39, 0.2);
 }
 
 .skill-icon {
@@ -449,21 +500,25 @@ section {
 }
 
 .project-card {
-    background: white;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 0 24px 60px rgba(45, 90, 39, 0.15);
+    border-color: rgba(45, 90, 39, 0.2);
 }
 
 /* Projects Section */
 .projects {
-    background: #fff;
+    background: linear-gradient(160deg, #f5faf6 0%, #edf4ef 100%);
 }
 
 /* This is the github Activity Section */
@@ -718,27 +773,33 @@ section {
 }
 
 .filter-btn {
-    padding: 0.75rem 1.5rem;
-    background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 25px;
-    color: #666;
+    padding: 0.7rem 1.6rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(45, 90, 39, 0.15);
+    border-radius: 50px;
+    color: #555;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .filter-btn:hover {
     border-color: #2d5a27;
     color: #2d5a27;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(45, 90, 39, 0.15);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .filter-btn.active {
     background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
     color: white;
-    border-color: #2d5a27;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
 }
 
 .projects-grid {
@@ -748,11 +809,14 @@ section {
 }
 
 .project-card {
-    background: white;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     opacity: 1;
     transform: scale(1);
 }
@@ -767,8 +831,9 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 0 24px 60px rgba(45, 90, 39, 0.15);
+    border-color: rgba(45, 90, 39, 0.2);
 }
 
 .project-image {
@@ -868,12 +933,19 @@ section {
 }
 
 .tech-tag {
-    background: #f0f0f0;
+    background: linear-gradient(135deg, rgba(45, 90, 39, 0.1), rgba(74, 124, 89, 0.08));
     color: #2d5a27;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid rgba(45, 90, 39, 0.15);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, rgba(45, 90, 39, 0.18), rgba(74, 124, 89, 0.15));
+    transform: translateY(-1px);
 }
 
 .project-links {
@@ -978,10 +1050,13 @@ section {
 
 /* This is where we style the contact form */
 .contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .form-group {
@@ -991,12 +1066,13 @@ section {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    border: 2px solid #f0f0f0;
-    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid rgba(45, 90, 39, 0.15);
+    border-radius: 14px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
-    font-family: inherit;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', inherit;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .form-group input:focus,
@@ -1012,10 +1088,10 @@ section {
 
 /* This is where we style the footer */
 .footer {
-    background: #333;
+    background: linear-gradient(135deg, #1a2e1a 0%, #2d5a27 100%);
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
 }
 
 .footer p {
